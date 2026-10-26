@@ -98,8 +98,9 @@ I used ChatGPT 6.1 sol for programming explanations, code examples, and debuggin
 - Help with implementing song dialogs
 - Polishing grammar/spelling in README
 - Helped debug Custom Song input including discovering and solving a bug after loading a custom song where the previously played song wasn't removed
+- Helped prepare/deploy for github pages
     
 AI assisted areas are also labeled in source code
 
-
+Extra note: Since I wrote this in typescript and vite, I needed additional serup to prepare github pages, so I had ChatGPT guide me through that process.This included separating the editable and compiled HTML files, configuring build output, and adding a redirect to the compiled website.
 

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Boombox EQ Visualizer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="./assets/index-DyokB1OV.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BmYMOZ4w.css">
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <h1>BOOMBOX EQ VISUALIZER!</h1>
+        <p> Jim Murcia Calderon · DataVis Assignment A1</p>
+      </header>
+      
+      <div id="boombox"></div>
+      <p class="instructions">
+        Choose a song with Add Cassette, then use Play and Pause.
+      </p>
+
+      <dialog id="song-dialog" aria-labelledby="song-dialog-title">
+        <h2 id="song-dialog-title">
+         Choose a Cassette!
+        </h2>
+        <label for="song-select">Song</label>
+        <select id="song-select">
+          <option value="Scheming Weasel.mp3">
+            Scheming Weasel
+          </option>
+          <option value="Monkeys Spinning Monkeys.mp3">
+            Monkeys Spinning Monkeys
+          </option>
+        </select>
+
+        <div class="dialog-buttons">
+          <button id="load-song-button" type="button">Load</button>
+          <button id="close-dialog-button" type="button">Cancel</button>
+        </div>
+        <label for="custom-song">Or insert your own MP3</label>
+        <input
+          id = "custom-song"
+          type = "file"
+          accept = ".mp3,audio/mpeg"
+        /> 
+
+      </dialog>
+
+      <p id="audio-status" role="status"></p>
+
+    </main>
+  </body>
+</html>  
