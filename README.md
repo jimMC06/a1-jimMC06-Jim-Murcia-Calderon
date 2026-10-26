@@ -21,9 +21,10 @@ Visit the generated local host in your terminal on your web browser
 Load the GitHub page or run locally.
 
 Once you are on the web page, use the buttons on the boombox to load up a song, play the song/EQ visual animation or pause operations.
-    - **Play:** Pressing the play button play whatever song is loaded
-    - **Pause:** Pressing the pause button pauses whatever song is playing if there is one
-    - **Add Cassette:** Pressing add cassette opens a pop-up menu that allows users to load up a sample song, choose their own songs, or cancel operations. Tapping on the current sample song gives you option to switch samples. Clicking on the choose file button allows user to upload/play their own mp3.
+
+- **Play:** Pressing the play button play whatever song is loaded
+- **Pause:** Pressing the pause button pauses whatever song is playing if there is one
+- **Add Cassette:** Pressing add cassette opens a pop-up menu that allows users to load up a sample song, choose their own songs, or cancel operations. Tapping on the current sample song gives you option to switch samples. Clicking on the choose file button allows user to upload/play their own mp3.
 
 ## Technical Achievements
 The Boombox EQ Visualizer uses real-time audio measurements to update/animate the visuals
@@ -31,9 +32,10 @@ The Boombox EQ Visualizer uses real-time audio measurements to update/animate th
 For sample songs and uploaded mp3s, audio.ts allows for playback and analysis including the frequencies. The data is then read in main.ts and used to display the frequencies and update them in real time according to the audio. 
 
 There are 3 interactive buttons that allow this to happen
-    - **Play:** Starts the audio and the visualization functions
-    - **Add Cassette:** Creates a pop-up window that allows the user to choose from loading sample songs/uploading their own or cancelling operations.
-    - **Pause:** Stops the audio, but allows for resuming where you left off later on
+
+- **Play:** Starts the audio and the visualization functions
+- **Add Cassette:** Creates a pop-up window that allows the user to choose from loading sample songs/uploading their own or cancelling operations.
+- **Pause:** Stops the audio, but allows for resuming where you left off later on
 
 Program allows for loading, analyzing and playing a user inputted mp3 file, using the data to create EQ visuals.
 
@@ -48,12 +50,12 @@ The boombox contains a separate visual animation element in the form of a screen
 Located in docs folder, along with a video demo
 
 Original Wireframes/Drafts Made in Canva:
-![Original-wireframe-1](.\docs\wireframes\BOOMBOX%20EQ%20VISUALIZER\1.svg)
-![Original-wireframe-2](.\docs\wireframes\BOOMBOX%20EQ%20VISUALIZER\2.svg)
+![Original-wireframe-1](docs/wireframes/BOOMBOX%20EQ%20VISUALIZER/1.svg)
+![Original-wireframe-2](docs/wireframes/BOOMBOX%20EQ%20VISUALIZER/2.svg)
 
 Screenshots:
-![Screenshot-of-boombox-not-playing](.\docs\screenshots\Boombox%20nothing%20playing.png)
-![Screenshot-of-boombox-playing](.\docs\screenshots\Boombox%20playing.png)
+![Screenshot-of-boombox-not-playing](docs/screenshots/Boombox%20nothing%20playing.png)
+![Screenshot-of-boombox-playing](docs/screenshots/Boombox%20playing.png)
 
 ## Sources and Credits
 
@@ -83,21 +85,21 @@ This Font Software is licensed under the SIL Open Font License, Version 1.1
 I used ChatGPT 6.1 sol for programming explanations, code examples, and debugging.
 
  Assistance included:
-    - Help with setting up TypeScript, Vite, and the build configuration.
-    - Catching many spelling mistakes/simple errors
-    - Helping in deciding what coordinates to use/centering objects
-    - Heavy error correction for button controls and the audio playback with some partial guidance and examples on how to properly integrate the button presses and playback using d3
-    - Explaining Web Audio API frequency-analysis and D3 bar-animation.
-    - Guiding/pointing me to better more effective implementations for different aspects of the code including 
-    - Help in connecting HTML button to dialog
-    - Explanations of some d3 functions in animation timer
-    - Troubleshooting audio file paths and build errors
-    - Help with implementing song dialogs
-    - Polishing grammar/spelling in README
-    - Helped debug Custom Song input including discovering and solving a bug after loading a custom song where the previously played song wasn't removed
-    
 
+- Help with setting up TypeScript, Vite, and the build configuration.
+- Catching many spelling mistakes/simple errors
+- Helping in deciding what coordinates to use/centering objects
+- Heavy error correction for button controls and the audio playback with some partial guidance and examples on how to properly integrate the button presses and playback using d3
+- Explaining Web Audio API frequency-analysis and D3 bar-animation.
+- Guiding/pointing me to better more effective implementations for different aspects of the code 
+- Help in connecting HTML button to dialog
+- Explanations of some d3 functions in animation timer
+- Troubleshooting audio file paths and build errors
+- Help with implementing song dialogs
+- Polishing grammar/spelling in README
+- Helped debug Custom Song input including discovering and solving a bug after loading a custom song where the previously played song wasn't removed
+    
 AI assisted areas are also labeled in source code
-----------------------------------------
+
 
 
