@@ -2,7 +2,7 @@
     EQ Visualizer + BoomBox art using d3
 
 ## Live Website
- Git page: INSERT LATER
+ Git page: https://jimmc06.github.io/a1-jimMC06-Jim-Murcia-Calderon/
 
 ## Run Locally
 Copy from git
