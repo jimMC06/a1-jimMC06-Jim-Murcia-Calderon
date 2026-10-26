@@ -1,87 +1,103 @@
-Assignment 1 - Hello World: GitHub and d3  
-===
+# Boombox EQ Visualizer
+    EQ Visualizer + BoomBox art using d3
 
-This is a starting project to make sure you can write and host a webpage that generates graphics using d3. 
+## Live Website
+ Git page: INSERT LATER
 
-The primary goal is to be able to generate graphics primitives (circles, rectangles, lines, polygons) at different locations on the screen with different colors. 
+## Run Locally
+Copy from git
 
-The secondary goals are to 1) introduce you to coding on GitHub, including publishing your visualizations with GitHub Pages, and 2) teach you how to host your web-based visualizations on a web-server, which opens up a world of possibilities.
-
-You may write everything from scratch, or start with demo programs from books or the web. 
-If you do start with code that you found on any project, you **must identify** the source of the code in your README and, most importantly, make non-trivial changes to the code to make it your own so you really learn what you're doing.
-For AI-generated code, please see the policy in the syllabus.
-
-For example, you could download one of the d3.js examples, read it through so you understand what it's doing, and then change the appearance of the graphical output to use different color schemes, different primitive shapes, different layouts of the primitives, and so on.
-
-Resources
----
-
-If you need a JavaScript/HTML/CSS refresher, see [MDN's Learn web development](https://developer.mozilla.org/en-US/docs/Learn_web_development), [Codecademy's Introduction to JavaScript](https://www.codecademy.com/learn/introduction-to-javascript), or find one of your choosing on the web.
-
-If you need a Git/GitHub refresher, some possible resources include GitHub's [Hello World](https://docs.github.com/en/get-started/using-github/hello-world), [GitHub flow](https://docs.github.com/en/get-started/using-github/github-flow), and [Fork a repository](https://docs.github.com/en/pull-requests/how-tos/work-with-forks/fork-a-repo) guides, [GitHub Skills](https://skills.github.com/), and [Learn Git Branching](https://learngitbranching.js.org/).
-
-Requirements
----
-
-1. Your project should contain at least four kinds of graphics primitives (circles, rectangles, lines, polygons) in different colors. 
-2. Your document should identify the sources of the code if you start with code that you found. 
-3. Your code should be forked from the GitHub repo and published with GitHub Pages. See the "GitHub Details" section below for detailed instructions on how to do this.
-
-GitHub Details
----
-
-- Fork the GitHub Repository for Assignment 1. You now have a copy associated with your username.
-- Make changes to index.html to fulfill the project requirements. 
-- Turn on GitHub Pages for your fork: Settings → Pages → Build and deployment → Source: "Deploy from a branch", Branch: `main`, folder `/ (root)`. See [Configuring a publishing source](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) if you need help. Spend some time learning this if you're new!
-- Edit the README.md with a link to your GitHub Pages site "https://YourUsernameGoesHere.github.io/a1-ghd3/".
-
-Submission Details
----
-- To submit, make a [Pull Request](https://docs.github.com/en/pull-requests/how-tos/create-pull-requests/creating-a-pull-request-from-a-fork) on the original repository.
-- Note: name your pull request using the following scheme: 
+Run the following in the terminal:
 ```
-a1-your Gh username-your first name-your lastname
-
+    npm install
+    npm run dev
 ```
+Visit the generated local host in your terminal on your web browser
 
-Vis Details
----
+## Project Description
+    A Music EQ Visualizer + boombox art project using D3 and TypeScript. Users are able to use the buttons on the boombox to load up and play/pause a song. During song playback an animated and accurate EQ visualizer plays on the boombox screen!
 
-For this project you should use d3.js. Later projects will use other tools (e.g. Python libraries), but d3 is the industry standard for now.
-You can learn from examples on the [d3.js](https://d3js.org) site or start from scratch.
+## How to Use
+Load the GitHub page or run locally.
 
-See [Getting started](https://d3js.org/getting-started) for ways to load d3. To preview your page locally, open index.html in Chrome, or run `python3 -m http.server` in the repo folder and visit http://localhost:8000.
+Once you are on the web page, use the buttons on the boombox to load up a song, play the song/EQ visual animation or pause operations.
+    - **Play:** Pressing the play button play whatever song is loaded
+    - **Pause:** Pressing the pause button pauses whatever song is playing if there is one
+    - **Add Cassette:** Pressing add cassette opens a pop-up menu that allows users to load up a sample song, choose their own songs, or cancel operations. Tapping on the current sample song gives you option to switch samples. Clicking on the choose file button allows user to upload/play their own mp3.
 
-Creative solutions are welcome! In the past I've seen recreations of paintings, interactives, and more.
+## Technical Achievements
+The Boombox EQ Visualizer uses real-time audio measurements to update/animate the visuals
 
-Please go beyond the minimum requirements of this project-- we've made it SUPER basic so you can explore, or fill in any gaps in your understanding of web coding.
-Experiment with other aspects of the [d3 API](https://d3js.org/api) and the examples in the [D3 gallery](https://observablehq.com/@d3/gallery). 
-Try making the elements interactive, for example, or animate them.
+For sample songs and uploaded mp3s, audio.ts allows for playback and analysis including the frequencies. The data is then read in main.ts and used to display the frequencies and update them in real time according to the audio. 
 
-Grading
----
+There are 3 interactive buttons that allow this to happen
+    - **Play:** Starts the audio and the visualization functions
+    - **Add Cassette:** Creates a pop-up window that allows the user to choose from loading sample songs/uploading their own or cancelling operations.
+    - **Pause:** Stops the audio, but allows for resuming where you left off later on
 
-Grades are on a 120 point scale. 
-96 points will be graded for functionality: the program does what the assignment requests with an informative README. 
+Program allows for loading, analyzing and playing a user inputted mp3 file, using the data to create EQ visuals.
 
-We will use Google Chrome to view submissions. 
-Be sure to test your code there.
+32 bars of frequency data displayed in real time, averaged from the first 64 measurements of 128 frequency bins.
 
-Below are some, but not necessarily all, of the key points we will consider during grading:
+## Design Achievements
+The boombox itself is made of rectangles, circles, triangles, lines, text, and paths all outlined and labeled in main.ts, all of which was made in d3. These all come together to create a simplistic retro boombox design. 
 
-- Circles and Rectangles  
-- Lines  
-- Paths  
-- Different colors  
-- README Quality
-    - A description of what you have created. 1-2 screenshots are recommended for the README.  
-    - A working link to the hosted files (your GitHub Pages url)  
-    - Section for Technical and Design Achievements
+The boombox contains a separate visual animation element in the form of a screen. The screen in the middle of the boombox shows accurate and real-time updating frequency EQ bars that change based on what audio is being played. 
 
-Technical Achievement Description -- 12  
-Design Achievement Description -- 12
+## Screenshots and original wireframes/drafts
+Located in docs folder, along with a video demo
 
-Remember, it is up to *you* to define what constitutes a technical and design achievements.
-Be ambitious as these are designed to allow you to shape your learning.
-These are the only way to move from B to A territory.
+Original Wireframes/Drafts Made in Canva:
+![Original-wireframe-1](.\docs\wireframes\BOOMBOX%20EQ%20VISUALIZER\1.svg)
+![Original-wireframe-2](.\docs\wireframes\BOOMBOX%20EQ%20VISUALIZER\2.svg)
+
+Screenshots:
+![Screenshot-of-boombox-not-playing](.\docs\screenshots\Boombox%20nothing%20playing.png)
+![Screenshot-of-boombox-playing](.\docs\screenshots\Boombox%20playing.png)
+
+## Sources and Credits
+
+### Music Samples
+Music Credit:
+
+"Scheming Weasel (faster version)"
+Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 4.0
+http://creativecommons.org/licenses/by/4.0/
+
+"Monkeys Spinning Monkeys"
+Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 4.0
+http://creativecommons.org/licenses/by/4.0/
+
+
+### Libraries and Font
+Built with TypeScript, Vite, D3, and the browser’s Web Audio API
+
+Font used: "Press Start 2P"
+
+Copyright 2012 The Press Start 2P Project Authors (cody@zone38.net), with Reserved Font Name "Press Start 2P".
+This Font Software is licensed under the SIL Open Font License, Version 1.1 
+
+### AI Assistance
+I used ChatGPT 6.1 sol for programming explanations, code examples, and debugging.
+
+ Assistance included:
+    - Help with setting up TypeScript, Vite, and the build configuration.
+    - Catching many spelling mistakes/simple errors
+    - Helping in deciding what coordinates to use/centering objects
+    - Heavy error correction for button controls and the audio playback with some partial guidance and examples on how to properly integrate the button presses and playback using d3
+    - Explaining Web Audio API frequency-analysis and D3 bar-animation.
+    - Guiding/pointing me to better more effective implementations for different aspects of the code including 
+    - Help in connecting HTML button to dialog
+    - Explanations of some d3 functions in animation timer
+    - Troubleshooting audio file paths and build errors
+    - Help with implementing song dialogs
+    - Polishing grammar/spelling in README
+    - Helped debug Custom Song input including discovering and solving a bug after loading a custom song where the previously played song wasn't removed
+    
+
+AI assisted areas are also labeled in source code
+----------------------------------------
+
 

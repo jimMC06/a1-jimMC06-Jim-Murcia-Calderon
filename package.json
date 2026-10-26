@@ -1,0 +1,33 @@
+{
+  "name": "a1-jimmc06-jim-murcia-calderon",
+  "version": "1.0.0",
+  "description": "Assignment 1 - Hello World: GitHub and d3  \r ===",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jimMC06/a1-jimMC06-Jim-Murcia-Calderon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/jimMC06/a1-jimMC06-Jim-Murcia-Calderon/issues"
+  },
+  "homepage": "https://github.com/jimMC06/a1-jimMC06-Jim-Murcia-Calderon#readme",
+  "dependencies": {
+    "d3": "^7.9.0"
+  },
+  "devDependencies": {
+    "@types/d3": "^7.4.3",
+    "@types/node": "^26.6.5",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5"
+  }
+}
