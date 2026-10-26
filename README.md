@@ -104,3 +104,4 @@ AI assisted areas are also labeled in source code
 
 Extra note: Since I wrote this in typescript and vite, I needed additional serup to prepare github pages, so I had ChatGPT guide me through that process.This included separating the editable and compiled HTML files, configuring build output, and adding a redirect to the compiled website.
 
+There is also a minor visual bug where if your custom song has a file name that is too long it goes out of bounds from the screen, I will fix that if I have time and remember (which means it probably wont happen)
